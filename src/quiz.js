@@ -29,11 +29,10 @@ class Quiz {
       //should increase 'correctAnswers' by 1 when a correct answer is passed as an argument
       //should check if the answer is correct by comparing it to the 'answer' property of the current question
       checkAnswer(answer) {
-        const currentQuestion = this.getQuestion()
-        if (answer === currentQuestion.answer);{
-          this.correctAnswers += 1; 
+        const currentQuestion = this.getQuestion();
+        if (answer === currentQuestion.answer) {
+            this.correctAnswers += 1;
         }
-        
     }
     //should return 'false' when 'currentQuestionIndex' is less than the 'questions' array length
     //should return 'true' when 'currentQuestionIndex' is equal to the 'questions' array length
@@ -54,9 +53,6 @@ class Quiz {
       }
     }
 //should return the average difficulty of the questions in the quiz
-    averageDifficulty(){
-      return 
-    }
 
     averageDifficulty(){
       const totalDifficulty = this.questions.reduce((sum, question) => sum + question.difficulty, 0);
